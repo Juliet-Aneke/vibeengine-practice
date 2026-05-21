@@ -183,13 +183,10 @@
         grid-template-columns: repeat(3, 1fr);
     }
 
-    .img img{
-    width: 50%
-    
-    object-fit:cover;
+   
 }
     
-}
+
 
 /* Mobile */
 @media (max-width: 768px) {
@@ -201,6 +198,11 @@
     .hero-inner{
         flex-direction: column;
     }
+
+     .img img{
+    width: 50%;
+    
+    object-fit:cover;}
 }
 
 /* Small phones */
