@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ig">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kids Fashion Store - Ụlọ Ahịa Uwe Ụmụaka</title>
+   <link rel="stylesheet" href="./css/igboki.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header / Navigation -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <span class="logo-icon">👶</span>
+                <h1>Kids Fashion</h1>
+            </div>
+            
+            <nav class="nav">
+                <a href="#home" class="nav-link">Ụlọ</a>
+                <a href="#products" class="nav-link">Ihe Na-ere Ahịa</a>
+                <a href="#about" class="nav-link">Gbasara Anyị</a>
+                <a href="#contact" class="nav-link">Kpọtụrụ Anyị</a>
+            </nav>
+
+            <!-- Cart Button -->
+            <div class="cart-container">
+                <button class="cart-btn" id="cartBtn">
+                    <span class="cart-icon">🛒</span>
+                    <span class="cart-text">Cart</span>
+                    <span class="cart-badge" id="cartBadge">0</span>
+                </button>
+                <!-- Cart Dropdown -->
+                <div class="cart-dropdown" id="cartDropdown">
+                    <h3>Ihe dị na Cart</h3>
+                    <ul class="cart-items" id="cartItems">
+                        <li class="cart-empty">Cart adịghị ihe</li>
+                    </ul>
+                    <div class="cart-total">
+                        <span>Total:</span>
+                        <span id="cartTotal">₦0.00</span>
+                    </div>
+                    <button class="checkout-btn">Kpee Ọnụ</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h2>Uwe Ụmụaka Ndị Kacha Mma!</h2>
+            <p>Zụta uwe mara mma, dịrụ ala, na nke kwesịrị ụmụaka gị.</p>
+            <a href="#products" class="btn-primary">Lelee Ihe Na-ere Ahịa</a>
+        </div>
+        <div class="hero-image">
+            <div class="hero-emoji">🧒👗🎽</div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products" id="products">
+        <div class="container">
+            <h2 class="section-title">Ihe Na-ere Ahịa Anyị</h2>
+            
+            <div class="products-grid">
+                <!-- Product 1 -->
+                <div class="product-card" data-id="1" data-name="Uwe Ụmụaka Rainbow" data-price="8500">
+                    <div class="product-image">
+                        <div class="product-emoji">🌈</div>
+                        <span class="product-tag">Ọhụrụ</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Uwe Ụmụaka Rainbow</h3>
+                        <p class="product-desc">Uwe mara mma maka ụmụaka nwoke na nwaanyị</p>
+                        <div class="product-footer">
+                            <span class="product-price">₦8,500</span>
+                            <button class="add-to-cart-btn" onclick="addToCart(1)">Tinye na Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card" data-id="2" data-name="Shirt Dinosaur" data-price="6500">
+                    <div class="product-image">
+                        <div class="product-emoji">🦕</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Shirt Dinosaur</h3>
+                        <p class="product-desc">Shirt dinosaur na-amasị ụmụaka nwoke</p>
+                        <div class="product-footer">
+                            <span class="product-price">₦6,500</span>
+                            <button class="add-to-cart-btn" onclick="addToCart(2)">Tinye na Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card" data-id="3" data-name="Dress Princess" data-price="12000">
+                    <div class="product-image">
+                        <div class="product-emoji">👗</div>
+                        <span class="product-tag">Nke a na-ahụkarị</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Dress Princess</h3>
+                        <p class="product-desc">Dress princess mara mma maka ụmụaka nwaanyị</p>
+                        <div class="product-footer">
+                            <span class="product-price">₦12,000</span>
+                            <button class="add-to-cart-btn" onclick="addToCart(3)">Tinye na Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-card" data-id="4" data-name="Sneakers Ụmụaka" data-price="15000">
+                    <div class="product-image">
+                        <div class="product-emoji">👟</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Sneakers Ụmụaka</h3>
+                        <p class="product-desc">Sneakers dị mma maka igba ọsọ na egwuregwu</p>
+                        <div class="product-footer">
+                            <span class="product-price">₦15,000</span>
+                            <button class="add-to-cart-btn" onclick="addToCart(4)">Tinye na Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="product-card" data-id="5" data-name="Jacket Ụmụaka" data-price="18000">
+                    <div class="product-image">
+                        <div class="product-emoji">🧥</div>
+                        <span class="product-tag">Nke oge ọkọchị</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Jacket Ụmụaka</h3>
+                        <p class="product-desc">Jacket na-agba ọkọchị maka oge oyi</p>
+                        <div class="product-footer">
+                            <span class="product-price">₦18,000</span>
+                            <button class="add-to-cart-btn" onclick="addToCart(5)">Tinye na Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="product-card" data-id="6" data-name="Pyjamas Set" data-price="9500">
+                    <div class="product-image">
+                        <div class="product-emoji">🌙</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Pyjamas Set</h3>
+                        <p class="product-desc">Pyjamas na-adịghị arọ maka ụra ụmụaka</p>
+                        <div class="product-footer">
+                            <span class="product-price">₦9,500</span>
+                            <button class="add-to-cart-btn" onclick="addToCart(6)">Tinye na Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <h2>Gbasara Kids Fashion Store</h2>
+                <p>Anyị na-ere uwe ụmụaka ndị kacha mma na Naịjirịa. Uwe anyị dị mma, dịrụ ala, na kwesịrị ụmụaka gị. Ọ bụ ezie na anyị na-enye nkwanye ùgwù nke ukwuu na ihe fọdụrụnụ anyị.</p>
+                <div class="features">
+                    <div class="feature">
+                        <span class="feature-icon">✅</span>
+                        <h4>Uwe Dị Mma</h4>
+                    </div>
+                    <div class="feature">
+                        <span class="feature-icon">🚚</span>
+                        <h4>Nnyefe Nke ọma</h4>
+                    </div>
+                    <div class="feature">
+                        <span class="feature-icon">💰</span>
+                        <h4>Ọnụ Ahịa Dịrụ Ala</h4>
+                    </div>
+                    <div class="feature">
+                        <span class="feature-icon">🔄</span>
+                        <h4>Nlaghachi Azụ</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Kids Fashion</h3>
+                    <p>Ụlọ ahịa uwe ụmụaka kacha mma na Naịjirịa.</p>
+                    <div class="social-links">
+                        <a href="#">📘</a>
+                        <a href="#">📸</a>
+                        <a href="#">🐦</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Njikọ Ngwaọrụ</h4>
+                    <ul>
+                        <li><a href="#home">Ụlọ</a></li>
+                        <li><a href="#products">Ihe Na-ere Ahịa</a></li>
+                        <li><a href="#about">Gbasara Anyị</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Nyere Anyị Aka</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Iwu Nlaghachi Azụ</a></li>
+                        <li><a href="#">Usoro Nhazi</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Kpọtụrụ Anyị</h4>
+                    <p>📧 info@kidsfashion.ng</p>
+                    <p>📞 +234 123 456 7890</p>
+                    <p>📍 Lagos, Naịjirịa</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p> Kids Fashion Store. Ikike e chekwara.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
